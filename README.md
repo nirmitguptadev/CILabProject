@@ -11,9 +11,17 @@ This project demonstrates a complete **Continuous Integration** environment usin
 Repository Structure
 --------------------
 
-Plaintext
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   CILabProject/  ├── src/main/java/com/muj/ci/Calculator.java    # Application Logic  ├── src/test/java/com/muj/ci/CalculatorTest.java # JUnit Test Suite  ├── pom.xml                                     # Maven Configuration  ├── Jenkinsfile                                 # Multibranch Pipeline Definition  ├── docker/                                     # Deployment Artifacts  │   └── Dockerfile  ├── scripts/                                    # Automation Scripts  │   ├── build.bat                               # Windows Build Script  │   └── deploy.sh                               # Linux Deployment Script  └── README.md                                   # Documentation   `
+ CILabProject/  
+ ├── src/main/java/com/muj/ci/Calculator.java    # Application Logic  
+ ├── src/test/java/com/muj/ci/CalculatorTest.java # JUnit Test Suite  
+ ├── pom.xml                                     # Maven Configuration  
+ ├── Jenkinsfile                                 # Multibranch Pipeline Definition  
+ ├── docker/                                     # Deployment Artifacts  
+ │   └── Dockerfile  
+ ├── scripts/                                    # Automation Scripts  
+ │   ├── build.bat                               # Windows Build Script  
+ │   └── deploy.sh                               # Linux Deployment Script  
+ └── README.md                                   # Documentation   `
 
 Technical Setup
 ---------------
