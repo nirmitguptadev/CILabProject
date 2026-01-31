@@ -1,63 +1,27 @@
-# CILabProject
-Project Overview
-This project demonstrates a complete Continuous Integration environment using Jenkins, Maven, and Git. It automates the lifecycle of a Java-based Calculator application, including compilation, unit testing, and artifact archiving.
+# CILabProject: Jenkins CI/CD Implementation
+**Nirmit Gupta** | **Enrollment: 23FE10CSE00802**
 
-Repository Structure
-Plaintext
+## 🏗 Repository Structure
+
 CILabProject/
-├── src/main/java/com/muj/ci/Calculator.java    # Application Logic
-├── src/test/java/com/muj/ci/CalculatorTest.java # JUnit Test Suite
-├── pom.xml                                     # Maven Configuration
-├── Jenkinsfile                                 # Multibranch Pipeline Definition
-├── docker/                                     # Deployment Artifacts
-│   └── Dockerfile
-├── scripts/                                    # Automation Scripts
-│   ├── build.bat                               # Windows Build Script
-│   └── deploy.sh                               # Linux Deployment Script
-└── README.md                                   # Documentation
-Technical Setup
-Jenkins Version: LTS
+├── src/main/java/com/muj/ci/Calculator.java    # Source Code
+├── src/test/java/com/muj/ci/CalculatorTest.java # JUnit Tests
+├── pom.xml                                     # Maven Config
+├── Jenkinsfile                                 # Pipeline Definition
+├── docker/Dockerfile                           # Containerization
+└── scripts/build.bat                           # Build Script
+#🛠 Jenkins Setup
+Build Tool: Apache Maven 3.9.12 (Path: D:\maven\...)
 
-JDK: 17
+Job 1 (Freestyle): Executes scripts/build.bat on SCM poll.
 
-Build Tool: Apache Maven 3.9.12
+Job 2 (Multibranch): Automated pipeline execution via Jenkinsfile.
 
-Platform: Windows 11 (Local Installation)
+#🚀 Execution
+Push code to the main branch.
 
-Jenkins Configuration Details
-1. Tools & Paths
-To ensure compatibility with the Windows environment, absolute paths were utilized in the Global Tool Configuration:
+Jenkins triggers the Build & Test stage.
 
-Maven Home: D:\maven\apache-maven-3.9.12
+Maven executes JUnit tests and packages the .jar artifact.
 
-Python Home: D:\Python\python.exe
-
-2. CI/CD Jobs
-Freestyle Project: Configured to poll SCM every 5 minutes. It executes scripts\build.bat, which triggers the Maven lifecycle.
-
-Multibranch Pipeline: Utilizes the Jenkinsfile to handle branch-specific logic:
-
-Main Branch: Full Build, Test, and "Deployment" simulation.
-
-Release Branches: Includes a placeholder for Security Scanning.
-
-Feature Branches: Restricted to Unit Testing to ensure fast feedback.
-
-How to Run
-Clone the Repository:
-git clone https://github.com/nirmitguptadev/CILabProject.git
-
-Jenkins Setup:
-
-Create a new Multibranch Pipeline job.
-
-Point to this repository and provide GitHub credentials.
-
-Triggering Builds:
-
-Manual: Click "Build Now."
-
-Automated: Push any change to the main branch.
-
-Troubleshooting
-If the build fails with mvn not recognized, verify that the path in scripts/build.bat matches your local Maven installation directory.
+Jenkins archives the build artifacts and records test results.
