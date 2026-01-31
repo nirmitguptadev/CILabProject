@@ -1,0 +1,3 @@
+@echo off
+echo Building CILabProject...
+"D:\maven\apache-maven-3.9.12\bin\mvn.cmd" clean package
